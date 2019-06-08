@@ -6,7 +6,7 @@ export default ({ children }) => (
     <div className="logo">
       <Link prefetch href="/"><a>roberto vecilla</a></Link>
       {' '}
-      (<a href={`https://github.com/robecilla`} target="_blank">src</a>)
+      (<a href={`https://github.com/robecilla/site`} target="_blank">src</a>)
     </div>
 
     { children }
