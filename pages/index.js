@@ -16,6 +16,15 @@ const Arrow = () => (
         bottom: 24px;
         left: 0;
         right: 0;
+        animation: MoveUpDown 2s linear infinite;
+      }
+      @keyframes MoveUpDown {
+        0%, 100% {
+          bottom: 24px;
+        }
+        50% {
+          bottom: 30px;
+        }
       }
     `}</style>
   </div>
@@ -62,7 +71,7 @@ const Home = props => {
         animation: fadein 3s;
       }
       nav {
-        margin-top: 20px;
+        margin-top: 24px;
         animation: fadein 4s;
       }
       a {
