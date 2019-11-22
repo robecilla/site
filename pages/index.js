@@ -1,7 +1,5 @@
 import { useState } from 'react'
 import Main from '../layouts/main'
-import DuolingoStats from '../components/DuolingoStats';
-import DuolingoAPI from '../api/duolingo';
 
 const Arrow = () => (
   <div>
@@ -39,9 +37,7 @@ const Home = props => {
         <nav>
           <a target="_blank" href="https://github.com/robecilla">Github</a>
           <a href="mailto:roberto.vecilla@gmail.com">Email</a>
-          <a href='#' onClick={() => setShow(!show)}>Duolingo</a>
         </nav>
-        {show ? <DuolingoStats stats={props} /> : null }
         <Arrow />
       </div>
     </div>
@@ -91,16 +87,5 @@ const Home = props => {
     `}</style>
   </Main>
 }
-
-Home.getInitialProps = async function() {
-  const Duolingo = new DuolingoAPI()
-  await Duolingo.login()
-  
-  return {
-    alixia: await Duolingo.getUserStats('alixg12'),
-    rob: await Duolingo.getUserStats('roberto.vecilla')
-  }
-};
-
 
 export default Home;

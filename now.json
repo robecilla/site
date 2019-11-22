@@ -3,8 +3,5 @@
     "name": "site",
     "builds": [
         { "src": "package.json", "use": "@now/next" }
-    ],
-    "env": {
-        "DUO_PASS": "@duolingo-pass"
-    }
+    ]
 }
