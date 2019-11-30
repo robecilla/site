@@ -1,8 +1,7 @@
-import { useState } from 'react'
 import Main from '../layouts/main'
 
 const Arrow = () => (
-  <div>
+  <div className="arrow">
     <svg width="21px" height="11px" viewBox="0 0 11 7" aria-label="dropdown">
       <g fill="none" fillRule="evenodd" strokeLinecap="square" stroke="#000">
         <path d="M1.5 1.5L5.5 5.59119M9.74261 1.5L5.82163 5.58057"></path>
@@ -24,18 +23,20 @@ const Arrow = () => (
           bottom: 30px;
         }
       }
+      .arrow > svg > g {
+        stroke: var(--font-color);
+      }
     `}</style>
   </div>
 )
 const Home = props => {
-  const [show, setShow] = useState(false)
   return <Main>
     <div className="home">
       <div className="main">
         <h1>Roberto Vecilla</h1>
         <h3>Software Engineer</h3>
         <nav>
-          <a target="_blank" href="https://github.com/robecilla">Github</a>
+          <a target="_blank" href="https://github.com/robecilla">Projects</a>
           <a href="mailto:roberto.vecilla@gmail.com">Email</a>
         </nav>
         <Arrow />
